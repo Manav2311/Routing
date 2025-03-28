@@ -1,26 +1,21 @@
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Show from './pages/Show'
-import Header from './pages/Header'
-import Update from './pages/update'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from './Components/Home'
+import Header from './Components/Header'
+import View from './Components/View'
+import Edit from './Components/Edit'
+import "./style.css"
 
 function App() {
 
   return (
-    <div class="bg-zinc-800  text-center text-white font-bold h-dvh
-">
     <BrowserRouter>
-    <Header/>
+    <Header />
       <Routes>
-         <Route path='/' element={<Home />} />
-         <Route path='/show' element={<Show />} />
-         <Route path='/updateData/:index' element={<Update />} />
-         
-
+        <Route path='/' element={<Home />}/>
+        <Route path='/view' element={<View />}/>
+        <Route path='/edit/:index' element={<Edit />}/>
       </Routes>
     </BrowserRouter>
-    </div>
   )
 }
 
